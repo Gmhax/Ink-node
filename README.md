@@ -26,8 +26,6 @@ A simple docker compose script for launching full / archive node for the Ink cha
 # Update and upgrade packages
 sudo apt-get update
 sudo apt-get upgrade -y
-
-### Docker and docker compose prerequisites
 sudo apt-get install -y curl
 sudo apt-get install -y gnupg
 sudo apt-get install -y ca-certificates
