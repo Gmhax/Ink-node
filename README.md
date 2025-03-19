@@ -39,25 +39,10 @@ sudo apt-get install -y lsb-release
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-sudo apt-get update
-
-### Install docker and docker compose on Ubuntu
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
-
 sudo usermod -aG docker $(whoami)
 
-### Verify the Docker and docker compose install on Ubuntu
-sudo docker run hello-world
 ```
-
-(For non-root user) After logged out and logged back in, test if docker is working by running.
-
-```sh
-docker ps
-```
-
-It should returns an empty container list without having any error. Otherwise, restart your machine if there are errors.
 
 ### Clone the Repository
 
@@ -74,9 +59,13 @@ Make a copy of `.env.example` named `.env`.
 cp .env.example .env
 ```
 
-Open `.env` with your editor of choice
+### Open `.env` with your editor of choice
 
-### Mandatory configurations
+```sh
+nano .env
+```
+
+### Mandatory configurations (follow the setup below)
 
 - **NETWORK_NAME** - Choose which Optimism network layer you want to operate on:
   - `ink-sepolia` - Ink Sepolia (Testnet)
