@@ -21,7 +21,6 @@ A simple docker compose script for launching full / archive node for the Ink cha
 ### Install dependencies
 
 
-Note: This command installs docker and docker compose for Ubuntu. 
 
 ```sh
 # Update and upgrade packages
