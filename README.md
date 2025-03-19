@@ -18,11 +18,10 @@ A simple docker compose script for launching full / archive node for the Ink cha
 
 ## Installation and Configuration
 
-### Install docker and docker compose
+### Install dependencies
 
-> Note: If you're not logged in as root, you'll need to log out and log in again after installation to complete the docker installation.
 
-Note: This command installs docker and docker compose for Ubuntu. For windows and mac desktop or laptop, please use Docker Desktop. For other OS, please find instructions in Google.
+Note: This command installs docker and docker compose for Ubuntu. 
 
 ```sh
 # Update and upgrade packages
@@ -34,8 +33,10 @@ sudo apt-get install -y curl
 sudo apt-get install -y gnupg
 sudo apt-get install -y ca-certificates
 sudo apt-get install -y lsb-release
+```
+## Download the docker gpg file to Ubuntu (if you have docker, just skip)
 
-### Download the docker gpg file to Ubuntu (if you have docker, just skip)
+```sh
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
