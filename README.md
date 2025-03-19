@@ -190,9 +190,13 @@ Navigate over to `Dashboards > Manage > Simple Node Dashboard` to see the dashbo
 
 ![metrics dashboard gif](https://user-images.githubusercontent.com/14298799/171476634-0cb84efd-adbf-4732-9c1d-d737915e1fa7.gif)
 
-## Troubleshooting
-
 ### Walking back L1Block with curr=0x0000...:0 next=0x0000...:0
+
+## Troubleshooting
+- Use TITO chatGPT
+- https://chatgpt.com/
+
+
 
 If you experience "walking back L1Block with curr=0x0000...:0 next=0x0000...:0" for a long time after the Ecotone upgrade, consider these fixes:
 
